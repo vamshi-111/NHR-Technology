@@ -60,7 +60,9 @@ function Header() {
       </header>
       {taskFormVisible && <TaskForm handleTaskFormSubmit={handleTaskFormSubmit} handleTaskFormCancel={() => setTaskFormVisible(false)} stages = {stages}/>}
       {stageFormVisible && <StageForm handleStageFormSubmit={handleStageFormSubmit} handleStageFormCancel={() => setStageFormVisible(false)} />}
-      {/* <div>
+      {/* 
+      //Can be used to display stages and tasks in a bulleted list format
+      <div>
         <div>
           <h2>Tasks:</h2>
           <ul>
@@ -73,7 +75,7 @@ function Header() {
           <h2>Stages:</h2>
           <ul>
             {stages.map((stage, index) => (
-              <li key={index}>{stage.stageName} - {stage.stageDescription}</li>
+              <li key={index}>Stage name: {stage.stageName} with stage description {stage.stageDescription}</li>
             ))}
           </ul>
         </div>

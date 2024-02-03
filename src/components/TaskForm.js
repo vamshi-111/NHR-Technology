@@ -7,7 +7,6 @@ const TaskForm = ({ handleTaskFormSubmit, handleTaskFormCancel, stages }) => {
   const [endDate, setEndDate] = useState('');
   const [selectedStage, setSelectedStage] = useState('');
 
-  // Use useEffect to set the selected stage to the first value by default
   useEffect(() => {
     if (stages.length > 0) {
       setSelectedStage(stages[0].stageName);
