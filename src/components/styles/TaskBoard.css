@@ -1,0 +1,53 @@
+.task-table {
+    border-collapse: collapse;
+  }
+  
+  .task-table th,
+  .task-table td {
+    border: 1px solid black;
+    padding: 8px;
+  }
+  
+  .task-table th {
+    background-color: #f2f2f2;
+  }
+
+  /* styles/TaskBoard.css */
+
+.task-board-container {
+  margin-top: 20px;
+}
+
+.task-table {
+  width: 100%;
+  border-collapse: collapse;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.task-table th, .task-table td {
+  padding: 12px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.task-table th {
+  background-color: #f2f2f2;
+}
+
+.task-table td {
+  word-wrap: break-word;
+}
+
+.task-name {
+  font-weight: bold;
+}
+
+.task-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+/* Add more styles as needed */

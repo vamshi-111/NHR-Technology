@@ -1,0 +1,30 @@
+/* Header.css */
+
+header {
+    padding: 20px;
+  }
+  
+  h1 {
+    margin: 0;
+  }
+  
+  hr {
+    border-color: white;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+  
+  button {
+    background-color: #2ecc71;
+    color: white;
+    padding: 10px 15px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #27ae60;
+  }
+  

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './styles/StageForm.css'
 
 const StageForm = ({ handleStageFormSubmit, handleStageFormCancel }) => {
   const [stageName, setStageName] = useState('');
@@ -12,17 +13,17 @@ const StageForm = ({ handleStageFormSubmit, handleStageFormCancel }) => {
   };
 
   return (
-    <div>
+    <div className='stage-form-container'>
       <h2>Stage Form</h2>
-      <form onSubmit={handleSubmit}>
+      <form className='stage-form' onSubmit={handleSubmit}>
         <label>
           Stage Name:
-          <input type="text" value={stageName} onChange={(e) => setStageName(e.target.value)} />
+          <input type="text" value={stageName} className='stage-name' onChange={(e) => setStageName(e.target.value)} />
         </label>
         <br />
         <label>
           Stage Description:
-          <textarea value={stageDescription} onChange={(e) => setStageDescription(e.target.value)} />
+          <textarea value={stageDescription} className='stage-desc' onChange={(e) => setStageDescription(e.target.value)} />
         </label>
         <br />
         <button type="submit">Submit</button>
