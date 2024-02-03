@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import TaskForm from './TaskForm';
 import StageForm from './StageForm';
 import DisplayTasks from './TaskBoard';
@@ -7,9 +7,8 @@ import './styles/Header.css';
 function Header() {
   const [taskFormVisible, setTaskFormVisible] = useState(false);
   const [stageFormVisible, setStageFormVisible] = useState(false);
-  const [tasks, setTasks] = useState([]);
-  const [stages, setStages] = useState([]);
-  //const [uniqueStages, setUniqueStages] = useState([]);
+  const [tasks, setTasks] = useState(() => JSON.parse(localStorage.getItem('tasks')) || []);
+  const [stages, setStages] = useState(() => JSON.parse(localStorage.getItem('stages')) || []);
 
   const handleTaskButtonClick = () => {
     //const uniqueStages = [...new Set(stages.map((stage) => stage.taskName))];
@@ -26,14 +25,26 @@ function Header() {
   };
 
   const handleTaskFormSubmit = (taskData) => {
-    setTasks([...tasks, taskData]);
+    const updatedTasks = [...tasks, taskData];
+    setTasks(updatedTasks);
+    localStorage.setItem('tasks', JSON.stringify(updatedTasks));
     setTaskFormVisible(false);
   };
 
   const handleStageFormSubmit = (stageData) => {
-    setStages([...stages, stageData]);
+    const updatedStages = [...stages, stageData];
+    setStages(updatedStages);
+    localStorage.setItem('stages', JSON.stringify(updatedStages));
     setStageFormVisible(false);
   };
+
+  useEffect(() => {
+    localStorage.setItem('tasks', JSON.stringify(tasks));
+  }, [tasks]);
+
+  useEffect(() => {
+    localStorage.setItem('stages', JSON.stringify(stages));
+  }, [stages]);
 
   return (
     <div>

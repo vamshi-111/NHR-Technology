@@ -18,6 +18,11 @@
   margin-top: 20px;
 }
 
+.due-label {
+  color: red; /* Set the color to red */
+  font-weight: bold;
+}
+
 .task-table {
   width: 100%;
   border-collapse: collapse;
