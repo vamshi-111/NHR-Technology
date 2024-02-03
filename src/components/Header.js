@@ -50,7 +50,7 @@ function Header() {
     <div>
       <header>
         <div>
-          <h1>Jira Replica</h1>
+          <h1>Task Tracker</h1>
           <hr />
           <div style={{ textAlign: "right"}}>
             <button onClick={handleTaskButtonClick}>Task</button>
